@@ -8,15 +8,16 @@ class UI extends StatelessWidget {
           //####### The Top Part #########
           Stack(
             children: <Widget>[
-              Padding(padding: EdgeInsets.only(left:30.0,right: 30.0,top: 35.0,),
-              child: Icon(Icons.more_vert),
+              Padding(padding: EdgeInsets.only(left:25.0,right: 30.0,top: 26.0,),
+              child: IconButton(icon:Icon(Icons.more_vert),onPressed: (){},),
               ),
                Padding(
               padding: const EdgeInsets.only(left:70.0,top: 20.0,right: 60.0),
               child: TextField(
+                controller: null,
                     textAlign: TextAlign.center,
                     decoration: InputDecoration(
-                    prefixIcon: Icon(Icons.search,color: Colors.black,size: 16.0,),
+                    prefixIcon: Icon(Icons.search,color: Colors.black,size: 13.0,),
                     filled: true,
                     fillColor: Colors.white30,
                     enabledBorder: OutlineInputBorder(
@@ -34,7 +35,12 @@ class UI extends StatelessWidget {
                alignment: Alignment.centerRight,
                  child: Padding(
                  padding: const EdgeInsets.only(right: 25.0,top: 40.0),
-                 child: Image.asset('image/Group 3006.png',height: 20.0,width: 20.0,),
+                 child: GestureDetector(
+                   onTap: (){
+
+                   },
+                   child: Image.asset('image/Group 3006.png',height: 20.0,width: 20.0,),
+                   ),
                ),
              ),
             ],
@@ -45,7 +51,7 @@ class UI extends StatelessWidget {
 
               //####### The First Row #########
               Padding(
-                padding: const EdgeInsets.all(40.0),
+                padding: const EdgeInsets.all(20.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
@@ -54,7 +60,9 @@ class UI extends StatelessWidget {
                           Text('See all',
                     style: TextStyle(color: Colors.grey,fontSize: 14.0),
                     ),
-                    Icon(Icons.arrow_forward_ios,size: 15.0,color: Colors.grey,),
+                    IconButton(icon: Icon(Icons.arrow_forward_ios,size: 15.0,color: Colors.grey,),
+                    onPressed: (){},
+                    ),
                         ],
                       ),
                     
@@ -67,89 +75,101 @@ class UI extends StatelessWidget {
 
               //####### The Second Row #########
               Padding(
-                padding: const EdgeInsets.only(left:40.0,right: 40.0,bottom: 15.0),
+                padding: const EdgeInsets.only(left:20.0,right: 20.0,bottom: 15.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Container(
-                    height: 100.0,
-                    width: MediaQuery.of(context).size.width * .36,
-                    decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.0),
-                    color: Colors.grey.shade200,
-                     ),
-                     child: Center(
-                       child: Column(
-                        children: <Widget>[
-                          SizedBox(height: 16.0,),
-                          Image.asset('image/Group 4114.png',height: 40.0,width: 40.0,),
-                          SizedBox(height: 10.0,),
-                          Text('Beauty & SPA' , 
-                          style: TextStyle(
-                            color: Colors.grey.shade900,
-                          ),
-                          ),
-                        ],
+                      height: 110.0,
+                      width: MediaQuery.of(context).size.width * .4,
+                      decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                      color: Colors.grey.shade200,
                        ),
-                     ),
-                    ),
+                       child: Center(
+                         child: Column(
+                          children: <Widget>[
+                            SizedBox(height: 16.0,),
+                            Image.asset('image/Group 4114.png',height: 40.0,width: 40.0,),
+                            SizedBox(height: 10.0,),
+                            GestureDetector(
+                              onTap: (){},
+                               child: Text('Beauty & SPA' , 
+                              style: TextStyle(
+                                color: Colors.grey.shade900,
+                              ),
+                              ),
+                            ),
+                          ],
+                         ),
+                       ),
+                      ),
+                   
                      Container(
-                    height: 100.0,
-                    width: MediaQuery.of(context).size.width * .36,
+                    height: 110.0,
+                    width: MediaQuery.of(context).size.width * .4,
                     decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10.0),
                     color: Colors.grey.shade200,
-                     ),
-                     child: Center(
-                       child: Column(
-                        children: <Widget>[
-                          SizedBox(height: 16.0,),
-                          Image.asset('image/1234.png',height: 40.0,width: 40.0,),
-                          SizedBox(height: 10.0,),
-                          Text('Plumbers' , 
-                          style: TextStyle(
-                            color: Colors.grey.shade900,
-                          ),
-                          ),
-                        ],
                        ),
-                     ),
+                       child: Center(
+                         child: Column(
+                          children: <Widget>[
+                            SizedBox(height: 16.0,),
+                            Image.asset('image/1234.png',height: 40.0,width: 40.0,),
+                            SizedBox(height: 10.0,),
+                            GestureDetector(
+                              onTap: (){},
+                               child: Text('Plumbers' , 
+                              style: TextStyle(
+                                color: Colors.grey.shade900,
+                              ),
+                              ),
+                            ),
+                          ],
+                         ),
+                       ),
                     ),
+                    
                   ],
                 ),
               ),
              
              //####### The Third Row #########
              Padding(
-                padding: const EdgeInsets.only(left:40.0,right: 40.0),
+                padding: const EdgeInsets.only(left:20.0,right: 20.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Container(
-                    height: 100.0,
-                    width: MediaQuery.of(context).size.width * .36,
-                    decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.0),
-                    color: Colors.grey.shade200,
-                     ),
-                     child: Center(
-                       child: Column(
-                        children: <Widget>[
-                          SizedBox(height: 16.0,),
-                          Image.asset('image/Path 5482.png',height: 40.0,width: 40.0,),
-                          SizedBox(height: 10.0,),
-                          Text('Moving' , 
-                          style: TextStyle(
-                            color: Colors.grey.shade900,
-                          ),
-                          ),
-                        ],
-                       ),
-                     ),
-                    ),
                      Container(
-                    height: 100.0,
-                    width: MediaQuery.of(context).size.width * .36,
+                      height: 110.0,
+                      width: MediaQuery.of(context).size.width * .4,
+                      decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                      color: Colors.grey.shade200,
+                       ),
+                       child: Center(
+                         child: Column(
+                          children: <Widget>[
+                            SizedBox(height: 16.0,),
+                            Image.asset('image/Path 5482.png',height: 40.0,width: 40.0,),
+                            SizedBox(height: 10.0,),
+                            GestureDetector(
+                              onTap: (){},
+                               child: Text('Moving' , 
+                              style: TextStyle(
+                                color: Colors.grey.shade900,
+                              ),
+                              ),
+                            ),
+                          ],
+                         ),
+                       ),
+                      ),
+                    
+                     Container(
+                    height: 110.0,
+                    width: MediaQuery.of(context).size.width * .4,
                     decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10.0),
                     color: Colors.grey.shade200,
@@ -160,10 +180,14 @@ class UI extends StatelessWidget {
                           SizedBox(height: 16.0,),
                           Image.asset('image/Group 4116.png',height: 40.0,width: 40.0,),
                           SizedBox(height: 10.0,),
-                          Text('Beauty & SPA' , 
-                          style: TextStyle(
-                            color: Colors.grey.shade900,
-                          ),
+                          GestureDetector(
+                            onTap: (){},
+                             child: Text('Appliance Repair' , 
+                            style: TextStyle(
+                              color: Colors.grey.shade900,
+                              
+                            ),
+                            ),
                           ),
                         ],
                        ),
