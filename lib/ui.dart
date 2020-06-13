@@ -8,6 +8,8 @@ class UI extends StatefulWidget {
 
 class UIState extends State<UI> {
   int _Index = 0;
+  int _isSelected = 0;
+  bool _selected = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -87,57 +89,75 @@ class UIState extends State<UI> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Container(
-                      height: 110.0,
-                      width: MediaQuery.of(context).size.width * .4,
-                      decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10.0),
-                      color: Colors.grey.shade200,
-                       ),
-                       child: Center(
-                         child: Column(
-                          children: <Widget>[
-                            SizedBox(height: 16.0,),
-                            Image.asset('image/Group 4114.png',height: 40.0,width: 40.0,),
-                            SizedBox(height: 10.0,),
-                            GestureDetector(
-                              onTap: (){},
-                               child: Text('Beauty & SPA' , 
-                              style: TextStyle(
-                                color: Colors.grey.shade900,
-                              ),
-                              ),
-                            ),
-                          ],
+                    GestureDetector(
+                        onTap: (){
+                        setState(() {
+                           _selected = true;
+                           _isSelected = 1;
+                        });
+                       },
+                         child: Container(
+                        height: 110.0,
+                        width: MediaQuery.of(context).size.width * .4,
+                        decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.0),
+                        color: Colors.grey.shade200,
+                        border: (_selected == true && _isSelected == 1)  ? Border.all(width: 1.0,color: Colors.black) : null,
                          ),
-                       ),
-                      ),
+                         child: Center(
+                           child: Column(
+                            children: <Widget>[
+                              SizedBox(height: 16.0,),
+                              Image.asset('image/Group 4114.png',height: 40.0,width: 40.0,),
+                              SizedBox(height: 10.0,),
+                              GestureDetector(
+                                onTap: (){},
+                                 child: Text('Beauty & SPA' , 
+                                style: TextStyle(
+                                  color: Colors.grey.shade900,
+                                ),
+                                ),
+                              ),
+                            ],
+                           ),
+                         ),
+                        ),
+                    ),
                    
-                     Container(
+                     GestureDetector(
+                      onTap: (){
+                        setState(() {
+                           _selected = true;
+                           _isSelected = 2;
+                        });
+                       },
+                    child: Container(
                     height: 110.0,
                     width: MediaQuery.of(context).size.width * .4,
                     decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10.0),
                     color: Colors.grey.shade200,
-                       ),
-                       child: Center(
-                         child: Column(
-                          children: <Widget>[
-                            SizedBox(height: 16.0,),
-                            Image.asset('image/1234.png',height: 40.0,width: 40.0,),
-                            SizedBox(height: 10.0,),
-                            GestureDetector(
-                              onTap: (){},
-                               child: Text('Plumbers' , 
-                              style: TextStyle(
-                                color: Colors.grey.shade900,
-                              ),
-                              ),
-                            ),
-                          ],
+                    border: (_selected == true && _isSelected == 2)  ? Border.all(width: 1.0,color: Colors.black) : null,
                          ),
-                       ),
+                         child: Center(
+                           child: Column(
+                            children: <Widget>[
+                              SizedBox(height: 16.0,),
+                              Image.asset('image/1234.png',height: 40.0,width: 40.0,),
+                              SizedBox(height: 10.0,),
+                              GestureDetector(
+                                onTap: (){},
+                                 child: Text('Plumbers' , 
+                                style: TextStyle(
+                                  color: Colors.grey.shade900,
+                                ),
+                                ),
+                              ),
+                            ],
+                           ),
+                         ),
                     ),
+                     ),
                     
                   ],
                 ),
@@ -149,58 +169,77 @@ class UIState extends State<UI> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                     Container(
-                      height: 110.0,
-                      width: MediaQuery.of(context).size.width * .4,
-                      decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10.0),
-                      color: Colors.grey.shade200,
+                     GestureDetector(
+                       onTap: (){
+                        setState(() {
+                           _selected = true;
+                           _isSelected = 3;
+                        });
+                       },
+                        child: Container(
+                         
+                        height: 110.0,
+                        width: MediaQuery.of(context).size.width * .4,
+                        decoration: BoxDecoration(
+                        border: (_selected == true && _isSelected == 3) ? Border.all(width: 1.0,color: Colors.black) : null,
+                        borderRadius: BorderRadius.circular(10.0),
+                        color: Colors.grey.shade200,
+                         ),
+                         child: Center(
+                           child: Column(
+                            children: <Widget>[
+                              SizedBox(height: 16.0,),
+                              Image.asset('image/Path 5482.png',height: 40.0,width: 40.0,),
+                              SizedBox(height: 10.0,),
+                              GestureDetector(
+                                onTap: (){},
+                                 child: Text('Moving' , 
+                                style: TextStyle(
+                                  color: Colors.grey.shade900,
+                                ),
+                                ),
+                              ),
+                            ],
+                           ),
+                         ),
+                        ),
+                     ),
+                    
+                     GestureDetector(
+                       onTap: (){
+                        setState(() {
+                           _selected = true;
+                           _isSelected = 4;
+                        });
+                       },
+                     child: Container(
+                    height: 110.0,
+                    width: MediaQuery.of(context).size.width * .4,
+                    decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10.0),
+                    color: Colors.grey.shade200,
+                    border: (_selected == true && _isSelected == 4)  ? Border.all(width: 1.0,color: Colors.black) : null,
                        ),
                        child: Center(
                          child: Column(
                           children: <Widget>[
                             SizedBox(height: 16.0,),
-                            Image.asset('image/Path 5482.png',height: 40.0,width: 40.0,),
+                            Image.asset('image/Group 4116.png',height: 40.0,width: 40.0,),
                             SizedBox(height: 10.0,),
                             GestureDetector(
                               onTap: (){},
-                               child: Text('Moving' , 
+                               child: Text('Appliance Repair' , 
                               style: TextStyle(
                                 color: Colors.grey.shade900,
+                                
                               ),
                               ),
                             ),
                           ],
                          ),
                        ),
-                      ),
-                    
-                     Container(
-                    height: 110.0,
-                    width: MediaQuery.of(context).size.width * .4,
-                    decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.0),
-                    color: Colors.grey.shade200,
-                     ),
-                     child: Center(
-                       child: Column(
-                        children: <Widget>[
-                          SizedBox(height: 16.0,),
-                          Image.asset('image/Group 4116.png',height: 40.0,width: 40.0,),
-                          SizedBox(height: 10.0,),
-                          GestureDetector(
-                            onTap: (){},
-                             child: Text('Appliance Repair' , 
-                            style: TextStyle(
-                              color: Colors.grey.shade900,
-                              
-                            ),
-                            ),
-                          ),
-                        ],
-                       ),
-                     ),
                     ),
+                     ),
                   ],
                 ),
               ),
