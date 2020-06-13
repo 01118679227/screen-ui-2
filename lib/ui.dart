@@ -1,5 +1,13 @@
 import 'package:flutter/material.dart';
-class UI extends StatelessWidget {
+class UI extends StatefulWidget {
+  @override
+  UIState createState() {
+    return new UIState();
+  }
+}
+
+class UIState extends State<UI> {
+  int _Index = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -206,6 +214,14 @@ class UI extends StatelessWidget {
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         fixedColor: Colors.blue.shade900,
+        currentIndex: _Index,
+      
+        onTap: (value){
+          setState((){
+             _Index = value;
+          });
+        },
+
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
